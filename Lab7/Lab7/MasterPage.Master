@@ -1,0 +1,116 @@
+﻿<%@Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="Lab7.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <asp:ContentPlaceHolder ID="cphHeader" runat="server" ></asp:ContentPlaceHolder>
+    <title></title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1200px;
+    }
+    .container-content{
+        margin-top: 20px;
+    }
+    .container-content-title{
+        text-align: center;
+        border: 1px solid #808080;
+        padding: 10px 0 10px 0;
+    }
+    #lblTitle{
+        font-size: 25px;
+    }
+    .container-content-content{
+   
+        
+    }
+    .container-content-content-left{
+      border-right: 1px solid #808080;
+      padding-right: 10%;
+      padding-top: 3%;
+      font-size: 20px;
+      padding-bottom: 20px;
+      float: left;
+      border-left: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+      border-right: 1px solid #808080;
+      padding-left: 10px;
+      height: 550px;
+      width: 350px;
+    }
+    .container-content-content-right{
+      padding-top: 2%;
+      text-align: center;
+      padding-right: 20%;
+      padding-left: 60px;
+      font-size: 20px;
+      padding-bottom: 20px;
+      float: right;
+      border-bottom: 1px solid #808080;
+      border-right: 1px solid #808080;
+      height: 550px;
+      width: 850px;
+    }
+    .right-title{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    input[type='text'i]{
+        font-size: 18px;
+        padding: 3px 5px 3px 5px;
+        margin-top: 7px;
+    }
+    table{
+        width: 400px;
+    }
+    td{
+        padding: 0 10px 0 10px;
+    }
+    .btn-action{
+        margin-top: 20px;
+    }
+    .btn{
+        padding: 3px 5px 3px 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+   .td-row1{
+       margin-top: 8px;
+   }
+</style>
+<body>
+    <div class="container">
+    <form id="form1" runat="server">
+        <div class="container-content">
+            <div class="container-content-title">
+                <asp:Label ID="lblTitle" runat="server" Text="Hạ Quang Vinh - Lớp: CCN04.6B"></asp:Label>
+            </div>
+            <div class="container-content-content">
+                <div class="container-content-content-left">
+                    <div class="trang-tinh-toan">
+                        <asp:HyperLink ID="hplTrangtinhtoan" runat="server" NavigateUrl="~/tinhtong.aspx" Text="Trang Tính Toán"></asp:HyperLink>
+                    </div>
+                    <div class="Cap-nhap-sinh-vien">
+                        <asp:HyperLink ID="hplCapnhapsinhvien" runat="server" NavigateUrl="~/capnhat.aspx" Text="Cập nhập sinh viên"></asp:HyperLink>
+                    </div>
+                    <div class="Tim-kiem-sinh-vien">
+                        <asp:HyperLink ID="hplTimkiemsinhvien" runat="server" NavigateUrl="~/timkiem.aspx" Text="Tìm kiếm sinh viên"></asp:HyperLink>
+                    </div>
+                </div>
+                <div class="container-content-content-right">
+                   <asp:ContentPlaceHolder ID="ctContent" runat="server" ></asp:ContentPlaceHolder>
+                 </div>
+            </div>
+        </div>
+    </form>
+     </div>
+</body>
+</html>
